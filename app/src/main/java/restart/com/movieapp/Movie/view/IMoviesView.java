@@ -14,4 +14,6 @@ public interface IMoviesView {
     void showDialog();
 
     void showErrorMsg(String error);
+
+    void showTop(MovieBean movieBean);
 }

@@ -20,16 +20,21 @@ public class MoviesPresenter implements IMoviesPresenter,IOnLoadMovieListener {
     }
 
     @Override
-    public void loadMovies() {
+    public void loadMovies(String total) {
         moviesView.showDialog();
-        movieModel.loadMovies(this);
+        movieModel.loadMovies(total,this);
     }
 
     @Override
     public void success(MovieBean movieBean) {
         moviesView.hideDialog();
         if (movieBean != null) {
-            moviesView.showMovies(movieBean);
+            if (movieBean.getTotal() == 250) {
+                moviesView.showTop(movieBean);
+            }else {
+                moviesView.showMovies(movieBean);
+            }
+
         }
 
     }

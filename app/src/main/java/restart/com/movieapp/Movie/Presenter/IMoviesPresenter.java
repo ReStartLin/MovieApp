@@ -5,5 +5,5 @@ package restart.com.movieapp.Movie.Presenter;
  */
 
 public interface IMoviesPresenter {
-    void loadMovies();
+    void loadMovies(String total);
 }

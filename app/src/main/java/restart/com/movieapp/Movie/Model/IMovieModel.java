@@ -5,5 +5,5 @@ package restart.com.movieapp.Movie.Model;
  */
 
 public interface IMovieModel {
-    void loadMovies(IOnLoadMovieListener iOnLoadListener);
+    void loadMovies(String total,IOnLoadMovieListener iOnLoadListener);
 }
